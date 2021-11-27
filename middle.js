@@ -1,6 +1,6 @@
-const eqArrays = require("./eqArrays");
+let eqArrays = require("./eqArrays");
 
-const assertArraysEqual = function(actual, expected) {
+let assertArraysEqual = function(actual, expected) {
 
   if (eqArrays(actual, expected) === true) {
     console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
@@ -14,9 +14,9 @@ module.exports = assertArraysEqual;
 
 
 // ACTUAL FUNCTION
-const middle = function(array) {
+let middle = function(array) {
   let res = [];
-  const len = array.length;
+  let len = array.length;
   if (len % 2 === 0 && len > 2) {
     res.push(array[len / 2 - 1]);
     res.push(array[len / 2]);

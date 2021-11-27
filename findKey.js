@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+let assertEqual = function (actual, expected) {
 	if (actual === expected) {
 		return console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
 	}
@@ -6,15 +6,15 @@ const assertEqual = function (actual, expected) {
 	return console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const findKey = function (obj, callback) {
-	for (const key in obj) {
+let findKey = function (obj, callback) {
+	for (let key in obj) {
 		if (callback(obj[key])) {
 			return key;
 		}
 	}
 };
 
-const r1 = (findKey(
+let r1 = (findKey(
 	{
 		'Blue Hill': {stars: 1},
 		Akaleri: {stars: 3},
@@ -24,14 +24,14 @@ const r1 = (findKey(
 		Akelarre: {stars: 5},
 	}, x => x.stars === 5));
 
-const r2 = (findKey(
+let r2 = (findKey(
 	{
 		sci_fi: 'The Expanse',
 		comedy: 'Brooklyn Nine-Nine',
 		drama: 'The Wire',
 	}, x => x === 'The Wire'));
 
-const r3 = (findKey(
+let r3 = (findKey(
 	{
 		'Blue Hill': {stars: 1},
 		Akaleri: {stars: 3},

@@ -22,7 +22,7 @@ const assertArraysEqual = function(actual, expected) {
 
 };
 
-/// map function below
+
 const words = ["ground", "control", "to", "major", "tom"];
 const map = function(array, callback) {
   const results = [];
@@ -32,22 +32,13 @@ const map = function(array, callback) {
   return results;
 }
 
-// const results1 = map(words, word => word[0]);
-// const results2 = map(words, word => word[word.length-1]);
-// const results3 = map(words, word => word);
-// const results4 = map(words, word => word.length);
 
-// //test cases
-// assertArraysEqual(results1, ["g","c","t","m","t"]);
-// assertArraysEqual(results2, ["d","l","o","r","m"]);
-// assertArraysEqual(results3, ["ground", "control", "to", "major", "tom"]);
-// assertArraysEqual(results4, [6,7,2,5,3]);
 const results1 = map(words, word => word[0]);
 const results2 = map(words, word => word[word.length-1]);
 const results3 = map(words, word => word);
 const results4 = map(words, word => word.length);
 
-// //test cases
+
 assertArraysEqual(results1, ["g","c","t","m","t"]);
 assertArraysEqual(results2, ["d","l","o","r","m"]);
 assertArraysEqual(results3, ["ground", "control", "to", "major", "tom"]);

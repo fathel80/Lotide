@@ -38,7 +38,6 @@ const letterPositions = function(sentence) {
   return obj;
 };
 
-// console.log(letterPositions("lighthouse in the house"));
-// console.log(assertArraysEqual(letterPositions("lighthouse in the house").h, [3,5,15,18]));
+
 console.log(letterPositions("lighthouse in the house"));
 console.log(assertArraysEqual(letterPositions("lighthouse in the house").h, [3,5,15,18]));

@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+let assertEqual = function(actual, expected) {
   if (actual === expected) {
     return console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,21 +6,19 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function(sentence) {
-  let obj = {};
-  for (const char of sentence) {
+let countLetters = function(sentence) {
+  let object = {};
+  for (let char of sentence) {
     if (char !== " ") {
-      if (obj[char]) {
-        obj[char] += 1;
+      if (object[char]) {
+        object[char] += 1;
       } else {
-        obj[char] = 1;
+        object[char] = 1;
       }
     }
   }
-  return obj;
+  return object;
 };
 
-// console.log(countLetters("lighthouse in the house"));
-// console.log(countLetters("LHL"));
 console.log(countLetters("lighthouse in the house"));
 console.log(countLetters("LHL"));
