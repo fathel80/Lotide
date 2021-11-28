@@ -1,4 +1,4 @@
-const eqArrays = function(actual, expected) {
+let eqArrays = function(actual, expected) {
   let check = true;
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] !== expected[i]) {
@@ -12,7 +12,7 @@ const eqArrays = function(actual, expected) {
   return check;
 };
 
-const assertArraysEqual = function(actual, expected) {
+let assertArraysEqual = function(actual, expected) {
 
   if (eqArrays(actual, expected) === true) {
     console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
@@ -23,9 +23,9 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 
-const words = ["ground", "control", "to", "major", "tom"];
-const map = function(array, callback) {
-  const results = [];
+let words = ["ground", "control", "to", "major", "tom"];
+let map = function(array, callback) {
+  let results = [];
   for (let item of array) {
     results.push(callback(item));
   }
@@ -33,10 +33,10 @@ const map = function(array, callback) {
 }
 
 
-const results1 = map(words, word => word[0]);
-const results2 = map(words, word => word[word.length-1]);
-const results3 = map(words, word => word);
-const results4 = map(words, word => word.length);
+let results1 = map(words, word => word[0]);
+let results2 = map(words, word => word[word.length-1]);
+let results3 = map(words, word => word);
+let results4 = map(words, word => word.length);
 
 
 assertArraysEqual(results1, ["g","c","t","m","t"]);
